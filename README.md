@@ -1,5 +1,5 @@
 # NBA Player Recommendation System 2019-2020
-**Brianna Lytle | DSI-CC9-LA | CAPSTONE**
+**Brianna Lytle | DSI-CC9-LA | FINAL CAPSTONE THESIS ALMOST DONE**
 
 # Problem
 
