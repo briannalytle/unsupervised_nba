@@ -34,7 +34,17 @@ def off_player_submit():
         printing = salary.loc[i].to_string(index =False)
         related_salaries.append({'player_name': i, 'salary' : printing})
 
-    return render_template('player_return.html',  players=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
+
+    teams = pickle.load(open(os.getcwd() + '/teams.p', 'rb'))
+    user_input_team = teams.loc[user_input].to_string(index = False)
+
+    related_team = []
+    for i in players:
+        team_print = teams.loc[i].to_string(index = False)
+        related_team.append({'player_name': i, 'player_team': team_print})
+
+
+    return render_template('player_return.html',  players=related_salaries, user_input = user_input, user_player_sal = user_player_sal, user_input_team = user_input_team, team_sals = related_team)
 
 
 @app.route('/defense')
