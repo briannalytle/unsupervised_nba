@@ -1,0 +1,24 @@
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+  background-color: aliceblue;
+    max-width: 800px;
+      margin: 0 auto;
+}
+
+.st-box {
+/* float:left; */
+width:500px;
+height:100px;
+
+        }
+
+.rd-box {
+/* float:right; */
+width:400px;
+height:200px;
+align-items: center;
+background-color:white;
+border:solid black;
+        }
