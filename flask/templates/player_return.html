@@ -23,10 +23,10 @@
 <!-- {{players}} -->
 <ol>
 
-{%for i in (players)%}
+  {%for i in (players)%}
 
-  <li>{{i['player_name']}} {{i['team_sals']}} {{i['salary']}}</li>
-{%endfor%}
+    <li>{{i['player_name']}} has a salary of {{i['salary']}}</li>
+  {%endfor%}
 
 
 </ol>

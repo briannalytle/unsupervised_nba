@@ -24,11 +24,11 @@ The final data set includes player salaries, RAPTOR ratings, and stats scraped f
 
 # EDA
 ## Unsupervised Learning
-My focus was on four subjects: Defense, Offense, Shooting, and Overall. With Principal Component Analysis (PCA) and Kmeans clustering, I identified three different types of players within these four categories. 
-    - **Types of Defense Players**:
-    - **Types of Offense Players**:
-    - **Types of Shooters**:
-    - **Overall Types of Players**:
+My focus was on four subjects: Defense, Offense, Shooting, and Overall. With Principal Component Analysis (PCA) and Kmeans clustering, I identified three different types of players within these four categories. These categories or described more in their respective notebookes in the kmeans_investigation folder.
+    - **Types of Defense Players**: The Adapter, DND, The Protector
+    - **Types of Offense Players**: Rising Star, Aggressor, Risker
+    - **Types of Shooters**: The Dependent, The Brave Knight, Ol'Reliable
+    - **Overall Types of Players**: Here to be Helped, Caretaker, Ironman
 
 # Recommendation System
 The goal of the recommendation system is allow a user find other NBA players who play similarily to their player of choice. A recommendation system was created for Defense, Offense, Shooting, and Overall metrics. The recommendation system is displayed in the flask app as well. 
@@ -44,3 +44,9 @@ A user would enter their player of choice, and select a button as to what "Type"
 - More EDA investigation to add to description's of each type of player and display this in the Flask App.
 - Incorporate Social Media Data
 - Include more features in flask (social media updates, photos, external news links)
+
+**Sources:** 
+- https://stats.nba.com/
+- https://www.basketball-reference.com/
+- https://projects.fivethirtyeight.com/2020-nba-player-ratings/
+- https://medium.com/datadriveninvestor/using-machine-learning-to-cluster-nba-skillsets-db90a87c2544
