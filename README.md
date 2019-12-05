@@ -2,6 +2,9 @@
 **Brianna Lytle | DSI-CC9-LA | FINAL CAPSTONE THESIS ALMOST DONE**
 
 # Problem
+Basketball players are given one of 5 labels that describe their role on the court. No matter the case, each position is expected to shoot and do their best to play a good offense and defense at one point on the court. 
+
+Using unsupervised learning, my goal is to identify the type of players that are in the NBA. I will also create a recommendation system so that any person can find a similar player to the one they have in mind. 
 
 # Data
 ## Scrapers
@@ -12,17 +15,20 @@
 
 ## Data Cleaning
 Issues with data included
-    1. Mismatching names (ex/"Glen Robinson" vs "Glenn Robinson III"
+    1. Mismatching names (ex/"Glen Robinson" vs "Glenn Robinson III", "Taurean Waller-Prince" vs "Taurean Prince")
     2. Players on roster with missing Data (ex/ Kevin Durant out of season due to injury)
-    3. 
+    3. Players who were waived before season started but still exist on a basketball-reference.com roster (ex/ J.R. Smith)
 
 ## Final Data Set
 The final data set includes player salaries, RAPTOR ratings, and stats scraped from stats.nba.com. The last scrape update was on December 4, 2019 were each team had about 17-20 games already played. 
 
 # EDA
 ## Unsupervised Learning
-My focus was on four subjects: Defense, Offense, Shooting, and Overall. 
-
+My focus was on four subjects: Defense, Offense, Shooting, and Overall. With Principal Component Analysis (PCA) and Kmeans clustering, I identified three different types of players within these four categories. 
+    - **Types of Defense Players**:
+    - **Types of Offense Players**:
+    - **Types of Shooters**:
+    - **Overall Types of Players**:
 
 # Recommendation System
 The goal of the recommendation system is allow a user find other NBA players who play similarily to their player of choice. A recommendation system was created for Defense, Offense, Shooting, and Overall metrics. The recommendation system is displayed in the flask app as well. 

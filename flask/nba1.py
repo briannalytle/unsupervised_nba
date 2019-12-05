@@ -34,9 +34,8 @@ def off_player_submit():
         printing = salary.loc[i].to_string(index =False)
         related_salaries.append({'player_name': i, 'salary' : printing})
 
-
-
     return render_template('player_return.html',  players=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
+
 
 @app.route('/defense')
 # create the controller
@@ -64,7 +63,7 @@ def shoot_player_submit():
     #load in user import data
     raw_data = request.args
     user_input = raw_data['player_name']
-    def_players = pickle.load(open(os.getcwd() + '/defensive.p', 'rb'))
+    def_players = pickle.load(open(os.getcwd() + '/shoot.p', 'rb'))
     players = def_players[user_input].sort_values()[1:4].index
 
     salary = pickle.load(open(os.getcwd() + '/salaries.p', 'rb'))
@@ -83,8 +82,8 @@ def shoot_player_submit():
 def overall_player_submit():
     raw_data = request.args
     user_input = raw_data['player_name']
-    def_players = pickle.load(open(os.getcwd() + '/defensive.p', 'rb'))
-    players = def_players[user_input].sort_values()[1:4].index
+    over_players = pickle.load(open(os.getcwd() + '/overall.p', 'rb'))
+    players = over_players[user_input].sort_values()[1:4].index
 
     salary = pickle.load(open(os.getcwd() + '/salaries.p', 'rb'))
 

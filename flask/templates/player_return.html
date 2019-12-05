@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Offense Players</title>
+  <title>Similar Players</title>
   <meta name="description" content="UGH">
   <meta name="author" content="Brianna Lytle">
 
@@ -12,23 +12,24 @@
 
 </head>
 
-<body>
-<img src="/static/nbalogo.png" width="100" height="150" alt="nfl-logo">
-<h1>NBA Player Recommender</h1>
-<p>Defense | Offense | Shooting | Overall</p>
+<div>
+<center><img src="/static/nbalogo1.png" width="350" height="175" alt="nfl-logo"><br>
+<img src="/static/recsystemtext.png" width="400" height="50" alt="nfl-logo"></center>
+</div>
+
+<center><div>
 <p>{{user_input}} is worth {{user_player_sal}}</p>
-<p>Similar players to {{user_input}} are</p>
+<p>The top 3 players similar to {{user_input}} are:</p>
 <!-- {{players}} -->
 <ol>
 
 {%for i in (players)%}
-  <!-- {print_sal = salary.loc[i].to_string(index = False)} -->
 
-    <li>{{i['player_name']}} has a salary of {{i['salary']}}</li>
+  <li>{{i['player_name']}} has a salary of {{i['salary']}}</li>
 {%endfor%}
 
 
 </ol>
-  <!-- <script src="js/scripts.js"></script> -->
-</body>
+</div>
+</body></center>
 </html>
