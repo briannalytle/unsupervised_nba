@@ -1,0 +1,33 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Offense Players</title>
+  <meta name="description" content="UGH">
+  <meta name="author" content="Brianna Lytle">
+
+  <link rel="stylesheet" type= "text/css" href="/static/styles.css">
+
+</head>
+
+<body>
+<h1>NBA Player Recommender</h1>
+<p>Defense | Offense | Shooting | Overall</p>
+<p>{{user_input}} is worth {{user_player_sal}}</p>
+<p>Similar players to {{user_input}} are</p>
+<!-- {{players}} -->
+<ol>
+
+{%for i in (players)%}
+  <!-- {print_sal = salary.loc[i].to_string(index = False)} -->
+
+    <li>{{i['player_name']}} has a salary of {{i['salary']}}</li>
+{%endfor%}
+
+
+</ol>
+  <!-- <script src="js/scripts.js"></script> -->
+</body>
+</html>
