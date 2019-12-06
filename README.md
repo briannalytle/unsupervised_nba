@@ -9,15 +9,18 @@ Using unsupervised learning, my goal is to identify the type of players that are
 # Data
 ## Scrapers
 1. 01_Salary_scrapes - Scrapes salaries of players from team pages on [basketball-reference](https://www.basketball-reference.com/). This file is scraping from the Uses the BeautifulSoup and Selenium.
+
 2. 02_538scrape - Scrapes from [FIVETHIRTYEIGHT](https://projects.fivethirtyeight.com/2020-nba-player-ratings/) Player Ratings using BeautifulSoup. 538 has their own rankings for players. The scraped RAPTOR scores are for the current 2019-2020 NBA season. 
+
 3. 03_stats_nba_scrape - Scrapes different tables from [stats.nba.com](https://stats.nba.com/) using Selenium. I scraped for Traditional, Defense, Scoring, Usage, and Misc player statistics. 
+
 4. 04_bball-ref-scrape - Scraping from [basketball-reference Advanced Stats](https://www.basketball-reference.com/leagues/NBA_2020_per_poss.html) using BeautifulSoup. This file was intended to scrape different seasons of advanced statistics per 100 team possessions. This scraped data was not used in the modeling process due to troubles in the data cleaning process.
 
 ## Data Cleaning
 Issues with data included
-    1. Mismatching names (ex/"Glen Robinson" vs "Glenn Robinson III", "Taurean Waller-Prince" vs "Taurean Prince")
-    2. Players on roster with missing Data (ex/ Kevin Durant out of season due to injury)
-    3. Players who were waived before season started but still exist on a basketball-reference.com roster (ex/ J.R. Smith)
+1. Mismatching names (ex/"Glen Robinson" vs "Glenn Robinson III", "Taurean Waller-Prince" vs "Taurean Prince")
+2. Players on roster with missing Data (ex/ Kevin Durant out of season due to injury)
+3. Players who were waived before season started but still exist on a basketball-reference.com roster (ex/ J.R. Smith)
 
 ## Final Data Set
 The final data set includes player salaries, RAPTOR ratings, and stats scraped from stats.nba.com. The last scrape update was on December 4, 2019 were each team had about 17-20 games already played. 
