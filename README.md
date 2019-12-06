@@ -1,5 +1,5 @@
 # Classify NBA Players w/Machine Learning
-**Brianna Lytle | DSI-CC9-LA | FINAL CAPSTONE THESIS ALMOST DONE**
+**Brianna Lytle | DSI-CC9-LA**
 
 # Problem
 Basketball players are given one of 5 labels that describe their role on the court. No matter the case, each position is expected to shoot and do their best to play a good offense and defense at one point on the court. 
