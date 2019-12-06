@@ -56,7 +56,7 @@ def def_player_submit():
         printing = salary.loc[i].to_string(index =False)
         related_salaries.append({'player_name': i, 'salary' : printing})
 
-    return render_template('player_return.html',  players=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
+    return render_template('player_return.html',  realed_salaries=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
 
 @app.route('/shooting')
 # create the controller
