@@ -25,17 +25,16 @@ def off_player_submit():
     off_players = pickle.load(open(os.getcwd() + '/offensive.p', 'rb'))
     players = off_players[user_input].sort_values()[1:4].index
 
-    play_team = pickle.load(open(os.getcwd() + '/sal_teams.p', 'rb'))
+    salary = pickle.load(open(os.getcwd() + '/salaries.p', 'rb'))
 
-    # user_player_sal = play_team.loc[user_input].to_string(index = False)
+    user_player_sal = salary.loc[user_input].to_string(index = False)
 
     related_salaries = []
-    realted_teams = []
     for i in players:
-        printing = play_team.loc[i].to_string(index =False).split()
-        related_salaries.append(printing)
+        printing = salary.loc[i].to_string(index =False)
+        related_salaries.append({'player_name': i, 'salary' : printing})
 
-    return render_template('player_return.html',  players=players, user_input = user_input, related_salaries =related_salaries)
+    return render_template('player_return.html',  related_salaries=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
 
 
 @app.route('/defense')
@@ -56,7 +55,14 @@ def def_player_submit():
         printing = salary.loc[i].to_string(index =False)
         related_salaries.append({'player_name': i, 'salary' : printing})
 
-    return render_template('player_return.html',  realed_salaries=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
+    teams = pickle.load(open(os.getcwd() + '/teams.p', 'rb'))
+    related_teams = []
+    for z in players:
+        team_print = teams.loc[i].to_string(index = False)
+        related_teams.append({'player_name' : i, 'team': team_print})
+
+    return render_template('player_return.html',  related_salaries=related_salaries, user_input = user_input, user_player_sal = user_player_sal, related_teams=related_teams)
+
 
 @app.route('/shooting')
 # create the controller
@@ -64,8 +70,8 @@ def shoot_player_submit():
     #load in user import data
     raw_data = request.args
     user_input = raw_data['player_name']
-    def_players = pickle.load(open(os.getcwd() + '/shoot.p', 'rb'))
-    players = def_players[user_input].sort_values()[1:4].index
+    shoot_players = pickle.load(open(os.getcwd() + '/shoot.p', 'rb'))
+    players = shoot_players[user_input].sort_values()[1:4].index
 
     salary = pickle.load(open(os.getcwd() + '/salaries.p', 'rb'))
 
@@ -76,7 +82,7 @@ def shoot_player_submit():
         printing = salary.loc[i].to_string(index =False)
         related_salaries.append({'player_name': i, 'salary' : printing})
 
-    return render_template('player_return.html',  players=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
+    return render_template('player_return.html',  related_salaries=related_salaries, user_input = user_input, user_player_sal = user_player_sal)
 
 @app.route('/overall')
 # create the controller

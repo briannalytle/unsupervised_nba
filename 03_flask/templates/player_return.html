@@ -23,9 +23,14 @@
 <!-- {{players}} -->
 <ol>
 
-  {%for i in (realed_salaries)%}
+  {%for i in (related_salaries)%}
 
-    <li>{{i['player_name']}} has a salary of {{i['salary']}}</li>
+    <li>{{i['player_name']}} | Salary: {{i['salary']}}
+      <!-- {%for z in (related_teams)%}
+          {{z['team']}}
+
+      {%endfor%} -->
+    </li>
   {%endfor%}
 
 
