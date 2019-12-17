@@ -56,4 +56,4 @@ Here is a rough draft of the flask app:
 - https://stats.nba.com/
 - https://www.basketball-reference.com/
 - https://projects.fivethirtyeight.com/2020-nba-player-ratings/
-- https://medium.com/datadriveninvestor/using-machine-learning-to-cluster-nba-skillsets-db90a87c2544
+For this project I was inspired by GA DSI Alumni Alex Cheng's article : https://fastbreakdata.com/classifying-the-modern-nba-player-with-machine-learning-539da03bb824
